@@ -1,13 +1,13 @@
 package Salary;
-import Exchange.ExchangeRateProvider;
-
+import Exchange.ExchangeRateProvide;
 public class SalaryConverter {
-    private final ExchangeRateProvider exchangeRateProvider;
+    private final ExchangeRateProvide exchangeRateProvider;
 
-    public SalaryConverter(ExchangeRateProvider exchangeRateProvider) {
+    public SalaryConverter(ExchangeRateProvide exchangeRateProvider) {
         this.exchangeRateProvider = exchangeRateProvider;
     }
-    public double GetSalary(String from, String to, double salary) {
-        return salary * exchangeRateProvider.getExchangeRate(from, to);
+
+    public double convertSalary(String from, String to, double salary) {
+        return salary * exchangeRateProvider.GetExchangeRate(from, to);
     }
 }
