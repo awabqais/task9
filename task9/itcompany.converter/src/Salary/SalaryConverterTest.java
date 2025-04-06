@@ -14,6 +14,10 @@ class SalaryConverterTest {
 
     @org.junit.jupiter.api.Test
     void convertSalary() {
-       
+        assertEquals(92.0, SC.convertSalary("USD", "EUR", 100));
+        assertEquals(190.0, SC.convertSalary("EUR", "USD", 100));
+        assertEquals(79.0, SC.convertSalary("USD", "GBP", 100));
+        assertEquals(126.0, SC.convertSalary("GBP", "USD", 100));
+        assertEquals(100.0, SC.convertSalary("XYZ", "USD", 100));
     }
 }
