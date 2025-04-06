@@ -7,4 +7,7 @@ public class SalaryConverter {
     public SalaryConverter(ExchangeRateProvider exchangeRateProvider) {
         this.exchangeRateProvider = exchangeRateProvider;
     }
+    public double GetSalary(String from, String to, double salary) {
+        return salary * exchangeRateProvider.getExchangeRate(from, to);
+    }
 }
